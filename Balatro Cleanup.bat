@@ -25,3 +25,4 @@ del /f /q "%BALATRO_DIR%\*.lua" 2>nul
 echo Cleanup complete.                          - finito
 endlocal
 exit /b
+ 
