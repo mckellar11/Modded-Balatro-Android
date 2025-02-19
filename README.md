@@ -15,7 +15,7 @@ Run balatro-mobile-maker with your phone plugged in. create the apk using your p
  - Download  [**balatro-mobile-maker**](https://github.com/blake502/balatro-mobile-maker/releases).
  - Leave it in downloads. (For real it doesn't matter. It assumes Balatro is installed at C:\Program Files (x86)\Steam\steamapps\common\Balatro)
  - Run **balatro-mobile-maker** from downloads folder
- ```
+ ``` 
  Would you like to automatically clean up once complete? (y/n):
 y
 Would you like to enable extra logging information? (y/n):
