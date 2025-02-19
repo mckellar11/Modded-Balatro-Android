@@ -1,5 +1,5 @@
 # Balatro Mobile-EM-Edition (my initials) 
-Fork of the original project by Blake502 but I am adding files to make everything easier because the wall of text in the github issues section is going to get someone lost. 
+Fork of the original project by Blake502 for turning your STEAM copy into an android copy but I am adding files to make everything easier because the wall of text in the github issues section is going to get someone lost. 
 
 The goal of this project is simplify the installation of the modded *Balatro* apk  on their mobile devices and transfer their mods in the correct format.
 Mods are not _officially_ supported, [but with my guide they are as easy to install as they are on PC](https://github.com/blake502/balatro-mobile-maker/issues/147#issuecomment-2652346316) 
