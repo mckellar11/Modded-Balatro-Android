@@ -61,7 +61,9 @@ I WOULD RECOMMEND HITTING 'N' or PAUSING HERE
  
  - if your mod folder is still in the "pc configuration" meaning you can run it on pc anytime you like without having to move/delete anything (no previous mobile maker formatting) then you should pause at the steam transfer stage and run the mobile makers save functions after the next few steps
  
- ## GETTING MODS IN ORDER (I have created TWO batch scripts to do EXACTLY these steps and have verified on my own PERSONAL main pc. I recommend using them but here is the process)
+ ## GETTING MODS IN ORDER 
+ 
+ (I have created TWO batch scripts to do EXACTLY these steps and have verified on my own PERSONAL main pc. I recommend using them but here is the process)
  
 - Open file explorer, navigate to `C:\Users\[YOURNAME]\AppData\Roaming\Balatro\Mods\lovely\dump`
 
