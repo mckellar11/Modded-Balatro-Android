@@ -44,11 +44,11 @@ copy /Y "%USERPROFILE%\AppData\Roaming\Balatro\Mods\Talisman\nativefs.lua" "%NAT
 
 :: Copy json.lua and nativefs.lua from mods with libs folder        ----- this was also missing
 for /d %%D in ("%MODS_DIR%\*") do (
-    if exist "%%D\libs\json.lua" (
-        copy /Y "%%D\libs\json.lua" "%BALATRO_DIR%\json.lua" >nul 2>&1
+    if exist "%%D\libs\json\json.lua" (
+        copy /Y "%%D\libs\json\json.lua" "%BALATRO_DIR%\json.lua" >nul 2>&1
     )
-    if exist "%%D\libs\nativefs.lua" (
-        copy /Y "%%D\libs\nativefs.lua" "%BALATRO_DIR%\nativefs.lua" >nul 2>&1
+    if exist "%%D\libs\nativefs\nativefs.lua" (
+        copy /Y "%%D\libs\nativefs\nativefs.lua" "%BALATRO_DIR%\nativefs.lua" >nul 2>&1
     )
 )
 
