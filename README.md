@@ -5,7 +5,7 @@ The goal of this project is simplify the installation of the modded *Balatro* ap
 Mods are not _officially_ supported, [but with my guide they are as easy to install as they are on PC](https://github.com/blake502/balatro-mobile-maker/issues/147#issuecomment-2652346316) 
 
 **this link goes to my text writeup if you don't feel comfortable running my batch scripts^^**
-
+The write up moves the files, the scripts copy/delete so the original are in tact. I may edit this guide to just copy solely
 
 ## How to Start 
 From my write up at https://github.com/blake502/balatro-mobile-maker/issues/147#issuecomment-2652346316
