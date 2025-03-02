@@ -13,10 +13,11 @@ set FUNCTIONS_DIR=%BALATRO_DIR%\functions
 set ENGINE_DIR=%BALATRO_DIR%\engine
 
 :: Delete folders and contents
-rd /s /q "%NATIVEFS_DIR%" 2>nul
-rd /s /q "%SMODS_DIR%" 2>nul
-rd /s /q "%FUNCTIONS_DIR%" 2>nul
-rd /s /q "%ENGINE_DIR%" 2>nul
+if exist "%NATIVEFS_DIR%" rd /s /q "%NATIVEFS_DIR%" 2>nul
+if exist "%SMODS_DIR%" rd /s /q "%SMODS_DIR%" 2>nul
+if exist "%FUNCTIONS_DIR%" rd /s /q "%FUNCTIONS_DIR%" 2>nul
+if exist "%ENGINE_DIR%" rd /s /q "%ENGINE_DIR%" 2>nul
+if exist "%BALATRO_DIR%\pokermon" rd /s /q "%BALATRO_DIR%\pokermon" 2>nul
 
 :: Delete files
 del /f /q "%LOVELY_FILE%" 2>nul
