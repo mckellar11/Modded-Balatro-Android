@@ -8,6 +8,7 @@ set MODS_DIR=%BALATRO_DIR%\Mods
 set NATIVEFS_DIR=%BALATRO_DIR%\nativefs
 set SMODS_DIR=%BALATRO_DIR%\SMODS
 set LOVELY_FILE=%BALATRO_DIR%\lovely.lua
+
 :: Find the folder containing "smods"
 for /d %%D in ("%MODS_DIR%\*") do (
     echo %%~nxD | findstr /i "smods" >nul && set STEAMMOD_DIR=%%D
@@ -27,7 +28,7 @@ echo } >> "%LOVELY_FILE%"
 for /d %%D in ("%MODS_DIR%\*") do (
     echo %%~nxD | findstr /i "flower.pot" >nul && set FP_DIR=%%D
 )
-
+:: If Flower Pot mod is found, and copy required files and rename
 if defined FP_DIR (
     set FP_LIBS=!FP_DIR!\libs
     if exist "!FP_LIBS!\json.lua" (
@@ -41,7 +42,6 @@ if defined FP_DIR (
 for /d %%D in ("%MODS_DIR%\*") do (
     echo %%~nxD | findstr /i "pokermon" >nul && set POKERMON_DIR=%%D
 )
-
 :: If Pokermon mod is found, copy setup.lua to BALATRO_DIR\pokermon
 if defined POKERMON_DIR (
     mkdir "%BALATRO_DIR%\pokermon" 2>nul
@@ -49,8 +49,64 @@ if defined POKERMON_DIR (
         copy /Y "%POKERMON_DIR%\setup.lua" "%BALATRO_DIR%\pokermon\setup.lua"
     )
 )
+:: Check for Cartomancer mod
+for /d %%D in ("%MODS_DIR%\*") do (
+    echo %%~nxD | findstr /i "cartomancer" >nul && set CARTOMANCER_DIR=%%D
+)
+:: If Cartomancer mod is found, create the cartomancer folder and copy required files
+if defined CARTOMANCER_DIR (
+    mkdir "%BALATRO_DIR%\cartomancer" 2>nul
+    if exist "%CARTOMANCER_DIR%\cartomancer.lua" (
+        copy /Y "%CARTOMANCER_DIR%\cartomancer.lua" "%BALATRO_DIR%\cartomancer\cartomancer.lua"
+    )
+    if exist "%CARTOMANCER_DIR%\libs\nativefs.lua" (
+        copy /Y "%CARTOMANCER_DIR%\libs\nativefs.lua" "%BALATRO_DIR%\cartomancer\nfs.lua"
+    )
+    if exist "%CARTOMANCER_DIR%\internal\init.lua" (
+        copy /Y "%CARTOMANCER_DIR%\internal\init.lua" "%BALATRO_DIR%\cartomancer\init.lua"
+    )
+)
+:: Search for the folder containing "SystemClock" (with possible variations)
+for /d %%D in ("%MODS_DIR%\*") do (
+    echo %%~nxD | findstr /i "SystemClock" >nul && set SYSTEMCLOCK_DIR=%%D
+)
+:: If the folder is found, create the systemclock folder and copy files based on the patches
+if defined SYSTEMCLOCK_DIR (
+    mkdir "%BALATRO_DIR%\systemclock" 2>nul
 
-
+    :: Draggable Container
+    if exist "%SYSTEMCLOCK_DIR%\src\draggable_container.lua" (
+        copy /Y "%SYSTEMCLOCK_DIR%\src\draggable_container.lua" "%BALATRO_DIR%\systemclock\draggablecontainer.lua" >nul 2>&1
+    )
+    :: Utilities
+    if exist "%SYSTEMCLOCK_DIR%\src\utilities.lua" (
+        copy /Y "%SYSTEMCLOCK_DIR%\src\utilities.lua" "%BALATRO_DIR%\systemclock\utilities.lua" >nul 2>&1
+    )
+    :: Config
+    if exist "%SYSTEMCLOCK_DIR%\src\config.lua" (
+        copy /Y "%SYSTEMCLOCK_DIR%\src\config.lua" "%BALATRO_DIR%\systemclock\config.lua" >nul 2>&1
+    )
+    :: Config UI
+    if exist "%SYSTEMCLOCK_DIR%\src\config_ui.lua" (
+        copy /Y "%SYSTEMCLOCK_DIR%\src\config_ui.lua" "%BALATRO_DIR%\systemclock\config_ui.lua" >nul 2>&1
+    )
+    :: Clock UI
+    if exist "%SYSTEMCLOCK_DIR%\src\clock_ui.lua" (
+        copy /Y "%SYSTEMCLOCK_DIR%\src\clock_ui.lua" "%BALATRO_DIR%\systemclock\clock_ui.lua" >nul 2>&1
+    )
+    :: Locale
+    if exist "%SYSTEMCLOCK_DIR%\src\locale.lua" (
+        copy /Y "%SYSTEMCLOCK_DIR%\src\locale.lua" "%BALATRO_DIR%\systemclock\locale.lua" >nul 2>&1
+    )
+    :: Logger
+    if exist "%SYSTEMCLOCK_DIR%\src\logger.lua" (
+        copy /Y "%SYSTEMCLOCK_DIR%\src\logger.lua" "%BALATRO_DIR%\systemclock\logger.lua" >nul 2>&1
+    )
+    :: Core
+    if exist "%SYSTEMCLOCK_DIR%\src\core.lua" (
+        copy /Y "%SYSTEMCLOCK_DIR%\src\core.lua" "%BALATRO_DIR%\systemclock\core.lua" >nul 2>&1
+    )
+)
 :: Copy files from Talisman mod
 copy /Y "%USERPROFILE%\AppData\Roaming\Balatro\Mods\Talisman\nativefs.lua" "%NATIVEFS_DIR%" >nul 2>&1
 
@@ -63,7 +119,6 @@ for /d %%D in ("%MODS_DIR%\*") do (
         copy /Y "%%D\libs\nativefs\nativefs.lua" "%BALATRO_DIR%\nativefs.lua" >nul 2>&1
     )
 )
-
 :: Copy files from the Steammod directory
 if defined STEAMMOD_DIR (
     copy /Y "%STEAMMOD_DIR%\version.lua" "%SMODS_DIR%" >nul 2>&1
