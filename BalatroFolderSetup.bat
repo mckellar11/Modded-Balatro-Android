@@ -36,7 +36,6 @@ for /d %%D in ("%MODS_DIR%\*") do (
    echo !MOD_NAME! | findstr /i "pokermon" >nul
         mkdir "%BALATRO_DIR%\pokermon" 2>nul
         if exist "!MOD_DIR!\setup.lua" (
-            echo Copying setup.lua
             copy /Y "!MOD_DIR!\setup.lua" "%BALATRO_DIR%\pokermon\setup.lua" >nul 2>&1
         
         )
