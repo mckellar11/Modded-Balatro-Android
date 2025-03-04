@@ -33,11 +33,15 @@ for /d %%D in ("%MODS_DIR%\*") do (
     )
 
     :: Check for Pokermon mod
-    if /i "!MOD_NAME!"=="pokermon" (
+   echo !MOD_NAME! | findstr /i "pokermon" >nul
         mkdir "%BALATRO_DIR%\pokermon" 2>nul
-        if exist "!MOD_DIR!\setup.lua" copy /Y "!MOD_DIR!\setup.lua" "%BALATRO_DIR%\pokermon\setup.lua" >nul 2>&1
+        if exist "!MOD_DIR!\setup.lua" (
+            echo Copying setup.lua
+            copy /Y "!MOD_DIR!\setup.lua" "%BALATRO_DIR%\pokermon\setup.lua" >nul 2>&1
+        
+        )
     )
-
+)
     :: Check for Cartomancer mod
     if /i "!MOD_NAME!"=="cartomancer" (
         mkdir "%BALATRO_DIR%\cartomancer" 2>nul
@@ -78,4 +82,4 @@ xcopy /E /Y "%MODS_DIR%\lovely\dump\*" "%BALATRO_DIR%" >nul 2>&1
 
 echo Done.
 endlocal
-exit /b
+
