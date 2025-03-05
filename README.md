@@ -69,7 +69,7 @@ I WOULD RECOMMEND HITTING 'N' or PAUSING HERE
  
 - Open file explorer, navigate to `C:\Users\[YOURNAME]\AppData\Roaming\Balatro\Mods\lovely\dump`
 
- - `CTRL+A` and then `CTRL+X` on the entire contents of the `\dump\` folder mentioned.
+ - `CTRL+A` and then `CTRL+C` on the entire contents of the `\dump\` folder mentioned.
 
 - go back to `C:\Users\[YOURNAME]\AppData\Roaming\Balatro\ `  `CTRL+V` all the files into that folder alongside/WITH the Mods folder not IN.
 - The files `nativefs.lua` from `C:\Users\[YOURNAME]\AppData\Roaming\Balatro\Mods\smods\libs\nativefs` and  `json.lua` from `C:\Users\YOURNAME\AppData\Roaming\Balatro\Mods\smods\libs\json` move them to (i didnt copy i used `ctrl+x`) `C:\Users\[YOURNAME]\AppData\Roaming\Balatro` 
@@ -84,13 +84,13 @@ I WOULD RECOMMEND HITTING 'N' or PAUSING HERE
 ```
 
 I just changed the version to the latest and directed it to this folder which worked for me^^
-- `ctrl+x`  the file  `version.lua` from your `C:\Users\YOURNAME\AppData\Roaming\Balatro\Mods\smods` then  the go to `C:\Users\YOURNAME\AppData\Roaming\Balatro` creating a few folder called `SMODS` all caps and paste the file into that SMODS folder. 
+- `ctrl+C`  the file  `version.lua` from your `C:\Users\YOURNAME\AppData\Roaming\Balatro\Mods\smods` then  the go to `C:\Users\YOURNAME\AppData\Roaming\Balatro` creating a few folder called `SMODS` all caps and paste the file into that SMODS folder. 
 
 - Make sure you remember the [balatro mobile compat mod](https://github.com/eeve-lyn/BalatroMobileCompat)
 
 IF YOU DON'T USE TALISMAN SKIP TO THE NEXT STEP AFTER THIS \/
 
-- if you have any mods that use talisman then you need to create a folder under `C:\Users\YOURNAME\AppData\Roaming\Balatro\`  called  `nativefs`  and  `CTRL+X`  the nativefs.lua from `C:\Users\Ethan\AppData\Roaming\Balatro\Mods\Talisman`  into the new  `C:\Users\YOURNAME\AppData\Roaming\Balatro\nativefs`  folder. 
+- if you have any mods that use talisman then you need to create a folder under `C:\Users\YOURNAME\AppData\Roaming\Balatro\`  called  `nativefs`  and  `CTRL+C`  the nativefs.lua from `C:\Users\Ethan\AppData\Roaming\Balatro\Mods\Talisman`  into the new  `C:\Users\YOURNAME\AppData\Roaming\Balatro\nativefs`  folder. 
 
 *At this point, all of the files are in the correct location on PC. YOU SHOULD NOW BE READY TO TRANSFER YOUR SAVES FROM THE TERMINAL OF MOBILE MAKER.*
 
