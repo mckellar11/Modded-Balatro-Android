@@ -1,3 +1,5 @@
+I AM EDITING SCRIPTS IF IT DOESNT WORK REVERT TO NESTING FIX BRANCH
+
 # Balatro Mobile-EM-Edition (my initials) 
 Fork of the original project by Blake502 for turning your STEAM copy into an android copy but I am adding files to make everything easier because the wall of text in the github issues section is going to get someone lost. 
 
