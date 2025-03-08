@@ -1,6 +1,3 @@
-# This code could most likely be improved, which is what I am slowly trying to do
-but if anyone wants to submit any PR's and you have more coding experience to make what i've done simpler, less parses, better regex then PLEASE let me know! or if you want to help create a mac version, or generic linux please dm me or again, submit a PR
-
 # Balatro Mobile-EM-Edition (my initials) 
 Fork of the original project by Blake502 for turning your STEAM copy into an android copy but I am adding files to make everything easier because the wall of text in the github issues section is going to get someone lost. 
 
@@ -94,6 +91,9 @@ IF YOU DON'T USE TALISMAN SKIP TO THE NEXT STEP AFTER THIS \/
 - if you have any mods that use talisman then you need to create a folder under `C:\Users\YOURNAME\AppData\Roaming\Balatro\`  called  `nativefs`  and  `CTRL+C`  the nativefs.lua from `C:\Users\Ethan\AppData\Roaming\Balatro\Mods\Talisman`  into the new  `C:\Users\YOURNAME\AppData\Roaming\Balatro\nativefs`  folder. 
 
 *At this point, all of the files are in the correct location on PC. YOU SHOULD NOW BE READY TO TRANSFER YOUR SAVES FROM THE TERMINAL OF MOBILE MAKER.*
+
+# This code could most likely be improved, which is what I am slowly trying to do
+but if anyone wants to submit any PR's and you have more coding experience to make what i've done simpler, less parses, better regex then PLEASE let me know! or if you want to help create a mac version, or generic linux please dm me or again, submit a PR
 
 
 
