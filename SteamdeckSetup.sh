@@ -10,7 +10,7 @@ LOVELY_FILE="$BALATRO_DIR/lovely.lua"
 
 # Find the Steam mod directory (folder containing "smods")
 for D in "$MODS_DIR"/*; do
-    if [[ "$(basename "$D")" =~ smods ]]; then
+    if [[ "$(basename "$D")" =~ smods|steamodded ]]; then
         STEAMMOD_DIR="$D"
         break
     fi
@@ -27,10 +27,11 @@ return {
   mod_dir = "/data/data/com.unofficial.balatro/files/save/game/Mods",
 }
 EOL
+
 # Find and handle Flower Pot mod
 temp=""
 for D in "$MODS_DIR"/*; do
-    if [[ "$(basename "$D" | tr '[:upper:]' '[:lower:]')" =~ flower[-_]*pot|pot[-_]*flower ]]; then
+    if [[ "$(basename "$D" | tr '[:upper:]' '[:lower:]')" =~ flower.*pot|pot.*flower ]]; then
         FP_DIR="$D"
         temp="$D/libs"
         break
