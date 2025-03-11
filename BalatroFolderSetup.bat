@@ -9,9 +9,9 @@ set NATIVEFS_DIR=%BALATRO_DIR%\nativefs
 set SMODS_DIR=%BALATRO_DIR%\SMODS
 set LOVELY_FILE=%BALATRO_DIR%\lovely.lua
 
-:: Find the folder containing "smods"
+:: Find the folder containing "smods" or "steamodded"
 for /d %%D in ("%MODS_DIR%\*") do (
-    echo %%~nxD | findstr /i "smods" >nul && set STEAMMOD_DIR=%%D
+    echo %%~nxD | findstr /i "smods steamodded" >nul && set STEAMMOD_DIR=%%D
 )
 :: Create necessary folders
 mkdir "%NATIVEFS_DIR%" 2>nul
@@ -24,9 +24,9 @@ echo   version = "0.7.1", >> "%LOVELY_FILE%"
 echo   mod_dir = "/data/data/com.unofficial.balatro/files/save/game/Mods", >> "%LOVELY_FILE%"
 echo } >> "%LOVELY_FILE%"
 
-:: Check for Flower Pot mod
+:: Check for Flower Pot mod (matches "flower pot", "flower-pot", "flower_pot", etc.)
 for /d %%D in ("%MODS_DIR%\*") do (
-    echo %%~nxD | findstr /i "flower.pot" >nul && set FP_DIR=%%D
+    echo %%~nxD | findstr /i "flower.*pot" >nul && set FP_DIR=%%D
 )
 :: If Flower Pot mod is found, and copy required files and rename
 if defined FP_DIR (
