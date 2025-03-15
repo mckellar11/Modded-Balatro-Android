@@ -70,7 +70,7 @@ I WOULD RECOMMEND HITTING 'N' or PAUSING HERE
  - `CTRL+A` and then `CTRL+C` on the entire contents of the `\dump\` folder mentioned.
 
 - go back to `C:\Users\[YOURNAME]\AppData\Roaming\Balatro\ `  `CTRL+V` all the files into that folder alongside/WITH the Mods folder not IN.
-- The files `nativefs.lua` from `C:\Users\[YOURNAME]\AppData\Roaming\Balatro\Mods\smods\libs\nativefs` and  `json.lua` from `C:\Users\YOURNAME\AppData\Roaming\Balatro\Mods\smods\libs\json` move them to (i didnt copy i used `ctrl+x`) `C:\Users\[YOURNAME]\AppData\Roaming\Balatro` 
+- The files `nativefs.lua` from `C:\Users\[YOURNAME]\AppData\Roaming\Balatro\Mods\smods\libs\nativefs` and  `json.lua` from `C:\Users\YOURNAME\AppData\Roaming\Balatro\Mods\smods\libs\json` copy them to `C:\Users\[YOURNAME]\AppData\Roaming\Balatro` 
 - Create a file in the same Balatro folder called "lovely.lua" and paste this  : 
 
 ```
