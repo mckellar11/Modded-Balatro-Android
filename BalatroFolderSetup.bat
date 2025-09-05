@@ -129,4 +129,3 @@ xcopy /E /Y "%MODS_DIR%\lovely\dump\*" "%BALATRO_DIR%" >nul 2>&1
 echo Done.
 endlocal
 exit /b
-
