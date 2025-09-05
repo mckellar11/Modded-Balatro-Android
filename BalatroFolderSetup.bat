@@ -122,9 +122,11 @@ for /d %%D in ("%MODS_DIR%\*") do (
 :: Copy files from the Steammod directory
 if defined STEAMMOD_DIR (
     copy /Y "%STEAMMOD_DIR%\version.lua" "%SMODS_DIR%" >nul 2>&1
+    copy /Y "%STEAMMOD_DIR%\release.lua" "%SMODS_DIR%" >nul 2>&1
 )
 
 xcopy /E /Y "%MODS_DIR%\lovely\dump\*" "%BALATRO_DIR%" >nul 2>&1
 echo Done.
 endlocal
 exit /b
+
