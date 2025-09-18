@@ -1,3 +1,10 @@
+A newer method for creating a modded android experience has arrived! https://lmm.shorty.systems/ you simply direct your balatro.exe and it will create the apk with lovely installed. you then follow the instructions on the website on where to load mods to
+
+
+
+
+
+
 # Balatro Mobile-EM-Edition (my initials) 
 Fork of the original project by Blake502
 Only forked because its easier for people to find. I did not change the mobile maker, I merely created a write up for what to do AFTER making the amk
