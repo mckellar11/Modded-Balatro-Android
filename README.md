@@ -1,4 +1,4 @@
-A newer method for creating a modded android experience has arrived! https://lmm.shorty.systems/ you simply direct your balatro.exe and it will create the apk with lovely installed. you then follow the instructions on the website on where to load mods to
+This repo is depreciated. I recomment the new method as I will not be updating this.>>>A newer method for creating a modded android experience has arrived! https://lmm.shorty.systems/ you simply direct your balatro.exe and it will create the apk with lovely installed. you then follow the instructions on the website on where to load mods to
 
 
 
